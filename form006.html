@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário 06</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="post">
+
+        <!--Observações
+        Esses inputs podem não apresentados de forma
+        correta dependendo do navegador ou pela sua versão-->
+
+        <p>
+            <input type="color" name="cor" id="icor" value="#ff0000">
+            <label for="icor">Cor:</label>
+            <!--
+            -- Input color --
+            Seleciona a cor
+            -->
+        </p>
+
+        <p>
+            <input type="file" name="foto" id="ifoto">
+            <label for="ifoto">Foto do perfil:</label>
+            <!--
+                Quando for envio de arquivos, utilizar o método
+                POST e NÃO o GET
+            -->
+        </p>
+
+        <p>
+            <input type="range" name="nivel" id="inivel" min="1" max="10"
+            value="2">
+            <label for="inivel">Nivel de Satisfação</label>
+            <!--
+            -- Input Range --
+            Linha de seleção por nível
+                -->
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
