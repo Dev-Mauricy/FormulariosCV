@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario 02</title>
+</head>
+<body>
+    <h1>Teste de formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <!--
+            -- Habilitar o autocomplete --
+            Ao habilitar o autocomplete, pode se dizer em qual input
+            certo terá sugestão correta
+        -->
+        <p>
+            <label for="iusuario">Usuário: </label>
+            <input type="text" name="usu" id="iusu" 
+            required minlength="5" maxlength="30" 
+            placeholder="Digite seu nome" autocomplete="username">
+        </p>
+        <p>
+            <label for="isenha">Senha: </label>
+            <input type="password" name="senha" id="isenha"
+             required minlength="8" maxlength="20" size="10" 
+             placeholder="Digite sua senha" autocomplete="current-password">
+             <!--
+                -- Type Passoword --
+                Deixa as caracteres ocultos
+
+                -- Required --
+                Esse parametro não deixa que o campo
+                fique sem dados, se torna um campo
+                obrigatório
+
+                -- Minlenght e maxlenght --
+                Parametro para estabelecer o número mínimo
+                de caracteres
+
+                -- Size --
+                Quantas letras mostrará por vez  
+                
+                -- Placeholder --
+                Dica do dado a ser preenchido, por exemplo,
+                "Digite sua senha"
+            
+            -->
+
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+            <!--
+            -- Input Reset--
+                Limpa os dados inseridos
+            -->
+        </p>
+    </form>
+</body>
+</html>

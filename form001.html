@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Meu primeiro Formulário</h1>
+
+    <!--Para desabilitar as sugestões do navegador ao preencher
+        os campos solicitados, -- autocomplete="off"--
+    
+        --ACTION-- 
+        Para onde vão os dados do usuário,
+        exemplo, cadastro.php
+
+        -- METHOD --
+        O valor padrão do method é GET, é o metódo
+        que apresenta as entradas de dados na URL
+        Já o valor POST, esconde todos, mas isso não
+        torna mais seguro, já que na inspeção do
+        navegador é possível encontrar esses dados
+        Para deixar os dados seguros, somente por
+        métodos de segurança como https e criptografar
+        os dados
+        esses valores na URL
+        POST
+        - Dados sensíveis
+        - https (Aprender mais)]
+        - Mais de 3000 bytes
+        - Envio de arquivos
+
+        O metódo GET suporta até 3000 bytes, oq se dá 
+        por umas 3000 letras
+    -->
+    <form action="cadastro.php" method="post" autocomplete="off">
+
+        <!--
+         --<INPUT>--
+         Os inputs são as caixas de entrada de dados,
+         elas possuem inumero tipos, como senha, numeros,
+         datas e muito mais
+
+            *** Não existe ligação da palavra que vem antes da 
+                tag input, isso sem utilizar o Label
+
+         Tipo Submit
+         Botão para enviar a oq foi digitado como dados do
+         usuário, o value é o nome que se apresentará no botão
+
+         --<Label>--
+         Serve para relacionar o texto com o input
+         ** É obrigatório o uso de Label
+
+         Tag - JS
+         Dentro do for="" tem que colocar o id do input
+        -->
+        <p><label for="inome">Nome:</label> 
+
+            <!-- ** O atributo name=, é mais importante para
+            PHP e HTML, ja o javascript se usa mais o id=-->
+            <input type="text" name="nome" id="inome"></p>
+
+        <P><label for="isobrenome">Sobrenome:</label> 
+            <input type="text" name="sobrenome" id="isobrenome"></P>
+            <!--** Pode colocar o atributo name= no submit,
+                   Mas não é necessário já que se trata somente
+                   de um botão-->
+        <p><input type="submit" value="Enviar"></p>
+    </form>
+</body>
+</html>
