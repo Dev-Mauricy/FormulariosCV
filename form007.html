@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário 7</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="post">
+        
+        <p>
+            <fieldset>
+                <legend>Estados do Brasil</legend>
+                <select name="estado" id="iest">
+                <label for="iest">Estado</label>
+                <!--
+                -- Tag Select --
+                Abre a possibilidade de existir uma lista de itens
+                onde só um pode ser escolhido
+                -- option --
+                São as opções que serão mostradas
+                -- optgroup --
+                Agrupar por um determinado tema, como por exemplo região
+                utilizando Label
+                -->
+                <optgroup label="Região Sudeste">
+                    <option value="" selected>-- Escolha --</option>
+                    <!--
+                        -- Selected --
+                        Deixar como opção padrão, para fazer um campo
+                        exemplo é so deixar o value em branco e colocar
+                        selected
+                    -->
+                    <option value="SP" >São Paulo</option>
+                    <option value="MG">Minas Gerais </option>
+                    <option value="RJ" >Rio de Janeiro</option>
+                   
+                </optgroup>
+                <optgroup label="Região Nordeste">
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="CE">Ceará</option>
+                    <option value="PA">Paraíba</option>
+                </optgroup>
+            </fieldset>
+
+            </select>
+        </p>
+
+        <fieldset>
+            <legend>Qual a sua Profissão?</legend>
+            <p>
+                <label for="iprof">Profissão: </label>
+                <input type="text" name="prof" id="iprof" list="lstprof">
+                <!--
+                    -- Data List --
+                    Opção parecida com o select mas deixa digitar outras opções
+                    -- list --
+                    Colocar o comando list correspondente ao id da datalist
+                -->
+                <datalist id="lstprof">
+                    <option>Administrador</option>
+                    <option>Desenvolvedor</option>
+                    <option>Professor</option>
+                    <option>Vendedor</option>
+                </datalist>
+            </p>
+        </fieldset>
+
+        <p>
+            <label for="imsg">Mensagem: </label><br>
+            <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+            <!--
+            O ideal é colocar o método POST para text area devido a limitação
+            de tamanho do metodo GET
+            -->
+        </p>
+
+        <p>
+            <input type="submit" value=" Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
